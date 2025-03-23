@@ -16,6 +16,12 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3001, // Set your desired port here
+    port: 3001, // Port của ứng dụng Vue
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000/", // API server
+        changeOrigin: true, // Cho phép thay đổi nguồn gốc nếu cần
+      },
+    },
   },
 })
