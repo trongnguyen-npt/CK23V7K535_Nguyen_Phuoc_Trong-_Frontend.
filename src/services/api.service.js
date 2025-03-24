@@ -6,7 +6,6 @@ const commonConfig = {
     Accept: "application/json",
   },
 };
-
 export default (baseURL) => 
   axios.create({
     baseURL,

@@ -13,7 +13,7 @@
       <strong>Điện thoại:</strong> {{ contact.phone }}
     </div>
     <div class="p-1">
-      <strong>Liên hệ yêu thích:&nbsp;</strong>
+      <strong>Liên hệ yêu thích :&nbsp;</strong>
       <i v-if="contact.favorite" class="fas fa-check"></i>
       <i v-else class="fas fa-times"></i>
     </div>
