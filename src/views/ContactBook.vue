@@ -38,6 +38,7 @@
   </div>
 </template>
 
+
 <script>
 import ContactCard from "@/components/ContactCard.vue";
 import InputSearch from "@/components/InputSearch.vue";

@@ -1,27 +1,25 @@
 <script>
+import AppHeader from "@/components/AppHeader.vue";
+
 export default {
-  props: {
-    contacts: { type: Array, default: [] },
-    activeIndex: { type: Number, default: -1 },
-  },
-  emits: ["update:activeIndex"],
-  methods: {
-    updateActiveIndex(index) {
-      this.$emit("update:activeIndex", index);
-    },
+  components: {
+    AppHeader,
   },
 };
 </script>
+
 <template>
-  <ul class="list-group">
-    <li
-      v-for="(contact, index) in contacts"
-      :key="contact._id"
-      class="list-group-item"
-      :class="{ active: index === activeIndex }"
-      @click="updateActiveIndex(index)"
-    >
-      {{ contact.name }}
-    </li>
-  </ul>
+  <div id="app">
+    <AppHeader />
+    <div class="container mt-3">
+      <router-view />
+    </div>
+  </div>
 </template>
+
+<style>
+.page {
+  max-width: 400px;
+  margin: auto;
+}
+</style>
