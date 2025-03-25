@@ -14,6 +14,13 @@ const routes = [
     component: () => import("@/views/ContactEdit.vue"), // Tải động ContactEdit component
     props: true, // Truyền các biến trong $route.params vào làm props
   },
+  
+  {
+    path: "/contacts/add",
+    name: "contact.add",
+    component: () => import("@/views/ComtactAdd.vue"),
+  },
+
   {
     path: "/:pathMatch(.*)*", // Định nghĩa route khớp với tất cả các URL không hợp lệ
     name: "notfound",
